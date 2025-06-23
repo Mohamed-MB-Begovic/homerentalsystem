@@ -300,7 +300,7 @@ const logout = async () => {
                     {user.userType === 'owner' && (
                       <>
                         <Link 
-                          to="/owner-dashboard"
+                          to="/owner"
                           className="px-4 py-2 text-center text-gray-700 hover:text-blue-600 hover:bg-gray-100 rounded transition"
                           onClick={() => setMobileMenuOpen(false)}
                         >
