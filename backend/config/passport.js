@@ -11,7 +11,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://localhost:9000/auth/google/callback",
+      callbackURL: "https://homerentalsystem-hsvi.onrender.com/auth/google/callback",
       scope: ["profile", "email"],
     },
     async(accessToken, refreshToken, profile, done) => {
