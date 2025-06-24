@@ -81,14 +81,14 @@ console.log(req.user)
 });
 
 // // Logout Route
-// app.get('/api/auth/logout', (req, res) => {
-//   req.logout((err) => {
-//     if (err) return res.status(500).json({ success: false });
-//     req.session.destroy();
-//     res.clearCookie('connect.sid');
-//     res.status(200).json({ success: true });
-//   });
-// });
+app.get('/api/auth/logout', (req, res) => {
+  req.logout((err) => {
+    if (err) return res.status(500).json({ success: false });
+    req.session.destroy();
+    res.clearCookie('connect.sid');
+    res.status(200).json({ success: true });
+  });
+});
 
 // Connect Other Routes
 app.use('/api/auth', router);
